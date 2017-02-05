@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13687D481DF8748400E7C260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13687D471DF8748400E7C260 /* main.m */; };
-		13687D4B1DF8748400E7C260 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13687D4A1DF8748400E7C260 /* AppDelegate.m */; };
-		13687D4E1DF8748400E7C260 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13687D4D1DF8748400E7C260 /* ViewController.m */; };
 		13687D531DF8748400E7C260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13687D521DF8748400E7C260 /* Assets.xcassets */; };
 		13687D851DF87D1E00E7C260 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13687D841DF87D1E00E7C260 /* UIKit.framework */; };
 		13687D871DF87D2400E7C260 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13687D861DF87D2400E7C260 /* Foundation.framework */; };
 		15A7CB5995C9DAB1C8803834 /* Pods_YogaKitSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80A931E90C7F3088CB86822 /* Pods_YogaKitSample.framework */; };
+		40BD9F461E477A09002790A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD9F451E477A09002790A9 /* AppDelegate.swift */; };
 		638A94481E1F06D100A726AD /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A94471E1F06D100A726AD /* SwiftViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,16 +50,12 @@
 
 /* Begin PBXFileReference section */
 		13687D431DF8748400E7C260 /* YogaKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13687D471DF8748400E7C260 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		13687D491DF8748400E7C260 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		13687D4A1DF8748400E7C260 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		13687D4C1DF8748400E7C260 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		13687D4D1DF8748400E7C260 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		13687D521DF8748400E7C260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13687D571DF8748400E7C260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13687D841DF87D1E00E7C260 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13687D861DF87D2400E7C260 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D2FF4D5FCA6A8C54A4074A3 /* Pods-YogaKitSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaKitSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YogaKitSample/Pods-YogaKitSample.debug.xcconfig"; sourceTree = "<group>"; };
+		40BD9F451E477A09002790A9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		638A94471E1F06D100A726AD /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		638A944F1E215CC800A726AD /* YogaKitSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YogaKitSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F0896A88112E957EF37C7F /* Pods-YogaKitSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YogaKitSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-YogaKitSample/Pods-YogaKitSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,24 +105,12 @@
 		13687D451DF8748400E7C260 /* YogaKitSample */ = {
 			isa = PBXGroup;
 			children = (
-				13687D491DF8748400E7C260 /* AppDelegate.h */,
-				13687D4A1DF8748400E7C260 /* AppDelegate.m */,
-				13687D4C1DF8748400E7C260 /* ViewController.h */,
-				13687D4D1DF8748400E7C260 /* ViewController.m */,
 				638A94471E1F06D100A726AD /* SwiftViewController.swift */,
 				13687D521DF8748400E7C260 /* Assets.xcassets */,
 				13687D571DF8748400E7C260 /* Info.plist */,
-				13687D461DF8748400E7C260 /* Supporting Files */,
+				40BD9F451E477A09002790A9 /* AppDelegate.swift */,
 			);
 			path = YogaKitSample;
-			sourceTree = "<group>";
-		};
-		13687D461DF8748400E7C260 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				13687D471DF8748400E7C260 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		13687D831DF87D1E00E7C260 /* Frameworks */ = {
@@ -305,9 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				638A94481E1F06D100A726AD /* SwiftViewController.swift in Sources */,
-				13687D4E1DF8748400E7C260 /* ViewController.m in Sources */,
-				13687D4B1DF8748400E7C260 /* AppDelegate.m in Sources */,
-				13687D481DF8748400E7C260 /* main.m in Sources */,
+				40BD9F461E477A09002790A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

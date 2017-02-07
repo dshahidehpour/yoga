@@ -10,48 +10,26 @@ import UIKit
 import YogaKit
 
 final class LayoutInclusionViewController: UIViewController {
-    private let button: UIButton = UIButton(type: .system)
-    private let disappearingView: UIView = UIView(frame: .zero)
-    
-    private lazy var contentView: UIView = {
+    override func viewDidLoad() {
+        let root = self.view!
+        root.backgroundColor = .white
+        root.yoga.isEnabled = true
+        root.yoga.flexDirection = .column
+        root.yoga.justifyContent = .spaceAround
+        root.layer.borderWidth = 1.0
+        root.layer.borderColor = UIColor.red.cgColor
+        
         let v = UIView(frame: .zero)
-        v.layer.borderColor = UIColor.lightGray.cgColor
-        v.layer.borderWidth = 1.0
-        v.backgroundColor = .white
+        v.backgroundColor = .blue
         v.yoga.isEnabled = true
         v.yoga.height = 300
         v.yoga.width = self.view.bounds.size.width
-        v.yoga.flexDirection = .row
-        v.yoga.justifyContent = .center
-        v.yoga.paddingHorizontal = 25
-        
-        self.view.addSubview(v)
-        return v
-    }()
-    
-    override func viewDidLoad() {
-        let root = self.view!
-        root.yoga.isEnabled = true
-        root.yoga.flexDirection = .column
-        
-        let redView = UIView(frame: .zero)
-        redView.backgroundColor = .red
-        redView.yoga.isEnabled = true
-        redView.yoga.flexGrow = 1
-        redView.yoga.flexShrink = 1
-        contentView.addSubview(redView)
-        
-        disappearingView.backgroundColor = .blue
-        disappearingView.yoga.isEnabled = true
-        disappearingView.yoga.flexGrow = 1
-        contentView.addSubview(disappearingView)
-        
-        button.setTitle("Add Blue View", for: UIControlState.selected)
-        button.setTitle("Remove Blue View", for: UIControlState.normal)
+        root.addSubview(v)
+
+        let button = UIButton(type: .system)
+        button.setTitle("Add Blue View", for: .normal)
         button.addTarget(self, action: #selector(buttonWasTapped), for: UIControlEvents.touchUpInside)
         button.yoga.isEnabled = true
-        button.yoga.height = 300
-        button.yoga.width = 300
         button.yoga.alignSelf = .center
         root.addSubview(button)
         
@@ -61,13 +39,6 @@ final class LayoutInclusionViewController: UIViewController {
     // MARK - UIButton Action
     
     func buttonWasTapped() {
-        button.isSelected = !button.isSelected
-        
-        button.isUserInteractionEnabled = false
-        disappearingView.yoga.isIncludedInLayout = !disappearingView.yoga.isIncludedInLayout
-        disappearingView.isHidden = !disappearingView.isHidden
-            
-        contentView.yoga.applyLayout()
-        button.isUserInteractionEnabled = true
+        self.view!.yoga.applyLayout()
     }
 }

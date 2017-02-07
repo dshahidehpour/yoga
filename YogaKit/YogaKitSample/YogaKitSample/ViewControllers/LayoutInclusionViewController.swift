@@ -27,7 +27,7 @@ final class LayoutInclusionViewController: UIViewController {
         root.addSubview(v)
 
         let button = UIButton(type: .system)
-        button.setTitle("Add Blue View", for: .normal)
+        button.setTitle("Reapply Layout", for: .normal)
         button.addTarget(self, action: #selector(buttonWasTapped), for: UIControlEvents.touchUpInside)
         button.yoga.isEnabled = true
         button.yoga.alignSelf = .center

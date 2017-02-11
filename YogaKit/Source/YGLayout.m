@@ -106,7 +106,7 @@ YG_VALUE_EDGE_PROPERTY(lowercased_name, capitalized_name, capitalized_name, YGEd
 + (instancetype)layoutWithLabel:(UILabel *)label {
   YGLayout *layout = [[self alloc] initWithView:label];
   if (layout != nil) {
-    FBKVOController *textController = [[FBKVOController alloc] initWithObserver:self retainObserved:NO];
+    FBKVOController *textController = [[FBKVOController alloc] initWithObserver:layout retainObserved:NO];
     [textController observe:label
                    keyPaths:@[FBKVOKeyPath(label.text), FBKVOKeyPath(label.textAlignment)]
                     options:NSKeyValueObservingOptionNew

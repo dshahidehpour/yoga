@@ -12,6 +12,8 @@
 
 @interface YGLayout : NSObject
 
++ (instancetype)layoutWithLabel:(UILabel *)label;
+
 /**
   The property that decides if we should include this view when calculating layout. Defaults to YES.
  */

@@ -88,6 +88,7 @@ YG_VALUE_EDGE_PROPERTY(lowercased_name, capitalized_name, capitalized_name, YGEd
 @interface YGLayout ()
 
 @property (nonatomic, weak, readonly) UIView *view;
+@property (nonatomic, strong, readonly) FBKVOController *controller;
 
 @end
 
@@ -100,6 +101,27 @@ YG_VALUE_EDGE_PROPERTY(lowercased_name, capitalized_name, capitalized_name, YGEd
 + (void)initialize
 {
   YGSetExperimentalFeatureEnabled(YGExperimentalFeatureWebFlexBasis, true);
+}
+
++ (instancetype)layoutWithLabel:(UILabel *)label {
+  YGLayout *layout = [[self alloc] initWithView:label];
+  if (layout != nil) {
+    FBKVOController *textController = [[FBKVOController alloc] initWithObserver:self retainObserved:NO];
+    [textController observe:label
+                   keyPaths:@[FBKVOKeyPath(label.text), FBKVOKeyPath(label.textAlignment)]
+                    options:NSKeyValueObservingOptionNew
+                      block:^(YGLayout  *_Nullable layout,
+                              UILabel *_Nonnull label,
+                              NSDictionary<NSString *,id> * _Nonnull change) {
+                        if (layout.isEnabled && layout.isLeaf) {
+                          [layout markDirty];
+                        }
+    }];
+    
+    layout->_controller = textController;
+  }
+  
+  return layout;
 }
 
 - (instancetype)initWithView:(UIView*)view

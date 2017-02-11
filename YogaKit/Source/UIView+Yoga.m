@@ -19,7 +19,13 @@ static const void *kYGYogaAssociatedKey = &kYGYogaAssociatedKey;
 {
   YGLayout *yoga = objc_getAssociatedObject(self, kYGYogaAssociatedKey);
   if (!yoga) {
-    yoga = [[YGLayout alloc] initWithView:self];
+    if ([self isKindOfClass:[UILabel class]]) {
+      UILabel *const label = (UILabel *)self;
+      yoga = [YGLayout layoutWithLabel:label];
+    } else {
+      yoga = [[YGLayout alloc] initWithView:self];
+    }
+    
     objc_setAssociatedObject(self, kYGYogaAssociatedKey, yoga, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
   }
 

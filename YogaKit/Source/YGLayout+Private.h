@@ -8,6 +8,7 @@
  */
 
 #import "YGLayout.h"
+#import <KVOController/KVOController.h>
 #import <yoga/Yoga.h>
 
 @interface YGLayout ()

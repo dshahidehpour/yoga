@@ -1,6 +1,8 @@
 PODS:
+  - KVOController (1.2.0)
   - Yoga (1.1.0)
   - YogaKit (1.1.0):
+    - KVOController
     - Yoga (~> 1.1)
 
 DEPENDENCIES:
@@ -8,11 +10,12 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   YogaKit:
-    :path: "../../YogaKit.podspec"
+    :path: ../../YogaKit.podspec
 
 SPEC CHECKSUMS:
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Yoga: 0bf083b7c485b20598020dbedcea869cbe53071e
-  YogaKit: 80df90de9ef2900baa111f2c93476a6f9e921385
+  YogaKit: 227e94afd4e93f5e3fe44710c932300b5455892c
 
 PODFILE CHECKSUM: 9db3bdea7f1b4b715ad859a449b2dc87fb6226cc
 
